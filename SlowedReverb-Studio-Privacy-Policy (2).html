@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Privacy Policy — Slowed+Reverb Studio</title>
+  <style>
+    body{font:17px/1.65 system-ui,sans-serif;max-width:880px;margin:40px auto;padding:0 22px;color:#202124;background:#fff}
+    h1,h2,h3{line-height:1.25}h2{margin-top:2em}a{color:#5446b9}li{margin:.4em 0}.meta{color:#62636b}hr{margin:3em 0;border:0;border-top:1px solid #ddd}
+    @media(prefers-color-scheme:dark){body{background:#111116;color:#ececf3}.meta{color:#b5b5c4}a{color:#b2a1ff}hr{border-color:#393943}}
+  </style>
+</head>
+<body>
+  <h1>Slowed+Reverb Studio — Privacy Policy</h1>
+  <p class="meta">Effective date: 19 November 2026 · Applies to browser extension version 2.1.0</p>
+  <p><a href="#ru" lang="ru">Читать на русском</a></p>
+  <p>This policy describes how the Slowed+Reverb Studio browser extension handles data to provide real-time audio effects and user-requested diagnostics. The publisher is identified on the extension’s Chrome Web Store listing.</p>
+
+  <h2>Audio processing</h2>
+  <p>When you activate a preset or an effect, the extension processes audio from the selected browser tab on your device. Depending on the selected mode and browser support, it either connects effects to the page’s audio player or uses a live tab audio stream. Audio buffers are used in memory for processing and playback. The extension does not save audio recordings, upload audio, or access the microphone or camera.</p>
+  <p>Audio integration scripts load on HTTP and HTTPS pages and their eligible embedded frames to discover media elements and Web Audio connections, including players created before you enable an effect. Loading these scripts does not itself start tab audio capture or apply audio effects. You activate effects through the extension’s controls. Off stops live tab capture and disables the extension’s audio processing.</p>
+
+  <h2>Settings, site information and diagnostic data</h2>
+  <ul>
+    <li><strong>Settings and presets:</strong> language preference, audio parameters, feature preferences, and custom preset names and values are stored in the browser’s local extension storage. Per-tab effect state is stored in session storage.</li>
+    <li><strong>Extension activity:</strong> when logging is enabled, a local log records up to 250 recent technical events, including timestamps, tab and frame identifiers, preset identifiers, effect parameters, processing modes and error messages. Logging is enabled by default and can be disabled. Existing logs can be cleared using the extension’s clear-logs control.</li>
+    <li><strong>Website information:</strong> the extension uses the selected tab’s address to check eligibility. Media source addresses are inspected to determine their protocol and whether they share an origin with the page. A diagnostic report includes the selected website’s origin and embedded frame origins, such as scheme, domain and port; it does not include page paths or query strings as dedicated address fields.</li>
+    <li><strong>Requested diagnostics:</strong> when you request a report, it contains browser and extension version information, selected settings, local technical logs, media playback and capture availability states, audio engine states and the site origins described above. It may include audio level and estimated BPM values, but no audio samples.</li>
+  </ul>
+  <p>The extension does not intentionally collect identity or payment information, passwords, authentication cookies, account tokens, messages, track titles or general page text. Reports do not include custom preset names or full media source URLs. Common URL and credential patterns in logged strings are redacted, but a report still contains website origins and technical details; review it before sharing.</p>
+
+  <h2>Purpose and sharing</h2>
+  <p>This information is used only to apply your audio settings, retain your preferences, restore per-tab state and diagnose compatibility problems. The extension has no developer-operated data upload endpoint, external analytics or advertising service, and does not automatically send diagnostics to the developer or third parties.</p>
+  <p>You can explicitly copy a diagnostic report to the clipboard or download it as a local JSON file. If you then send that report to someone else, including a support service or an AI service, that is your separate sharing action and the recipient’s policies apply. The extension does not sell user data, use it for advertising or profiling, or use it for credit or lending decisions.</p>
+  <p>The use of information received from Google APIs adheres to the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
+
+  <h2>Retention and your controls</h2>
+  <p>Settings and custom presets remain in the browser until changed, deleted or removed with the extension’s local data. Logs retain at most 250 events and remain until cleared, overwritten by newer events or removed with the extension’s local data. Disabling logging stops new log entries and does not erase existing entries. Session state is removed as tabs are closed or the browser clears session storage.</p>
+  <p>Live audio streams and processing resources are released when processing stops or capture ends; audio is not retained as a recording. Downloaded diagnostic files and copies placed on the clipboard are outside extension storage and must be deleted separately. Uninstalling the extension removes its browser-managed storage; it does not delete files you downloaded or reports you shared.</p>
+
+  <h2>Permissions</h2>
+  <p><strong>storage</strong> retains local settings, presets, session state and technical logs. <strong>scripting</strong> installs bundled audio integration code and gathers requested technical diagnostics in eligible tabs and frames. <strong>activeTab</strong> supports operations on the tab you select by invoking the extension. <strong>tabCapture</strong> provides a live audio stream from that selected tab. <strong>offscreen</strong> keeps the local audio engine running when the popup is closed. HTTP and HTTPS host access supports early player discovery and embedded players across websites.</p>
+  <p>All executable extension code is bundled with the installed extension. The extension does not load remote executable code. Restricting site access or revoking permissions can limit functionality.</p>
+
+  <h2>Changes</h2>
+  <p>If the extension’s data practices change, this policy will be updated to describe them. The policy date and applicable extension version appear above.</p>
+
+  <hr>
+  <section id="ru" lang="ru">
+    <h1>Slowed+Reverb Studio — Политика конфиденциальности</h1>
+    <p class="meta">Дата вступления в силу: 19 ноября 2026 года · Для браузерного расширения версии 2.1.0</p>
+    <p>Эта политика описывает обработку данных браузерным расширением Slowed+Reverb Studio для применения звуковых эффектов в реальном времени и диагностики по запросу пользователя. Издатель указан на странице расширения в Интернет-магазине Chrome.</p>
+
+    <h2>Обработка звука</h2>
+    <p>После включения пресета или эффекта расширение обрабатывает звук выбранной вкладки на вашем устройстве. В зависимости от режима и возможностей браузера оно подключает эффекты к плееру страницы либо использует живой аудиопоток вкладки. Аудиобуферы используются в оперативной памяти для обработки и воспроизведения. Расширение не сохраняет аудиозаписи, не загружает звук на сервер и не обращается к микрофону или камере.</p>
+    <p>Скрипты интеграции загружаются на HTTP- и HTTPS-страницах и в доступных встроенных фреймах, чтобы обнаруживать медиаэлементы и связи Web Audio, в том числе созданные до включения эффекта. Само по себе это не запускает захват звука вкладки и не включает звуковые эффекты. Эффекты включаются через элементы управления расширения. Off останавливает захват звука вкладки и отключает обработку звука расширением.</p>
+
+    <h2>Настройки, сведения о сайтах и диагностика</h2>
+    <ul>
+      <li><strong>Настройки и пресеты:</strong> язык, параметры звука, предпочтения и названия и значения пользовательских пресетов сохраняются в локальном хранилище расширения. Состояние эффектов отдельных вкладок сохраняется в сессионном хранилище.</li>
+      <li><strong>Действия в расширении:</strong> при включённом журнале локально сохраняются до 250 последних технических событий: время, идентификаторы вкладок и фреймов, идентификаторы пресетов, параметры эффектов, режимы обработки и сообщения об ошибках. Журнал включён по умолчанию. Его можно отключить, а существующие записи можно удалить кнопкой очистки журнала.</li>
+      <li><strong>Сведения о сайтах:</strong> адрес выбранной вкладки используется для проверки возможности работы. Адреса источников медиа проверяются для определения протокола и совпадения источника со страницей. Диагностический отчёт содержит origin сайта и встроенных фреймов, то есть схему, домен и порт; пути страниц и параметры запросов не включаются в отдельные поля адресов.</li>
+      <li><strong>Диагностика по запросу:</strong> при создании отчёта в него включаются сведения о браузере и версии расширения, выбранные настройки, локальные технические журналы, состояния воспроизведения, доступности захвата и звукового движка, а также указанные выше origin сайтов. Отчёт может содержать значения уровня звука и оценки BPM, но не аудиосэмплы.</li>
+    </ul>
+    <p>Расширение не предназначено для сбора сведений о личности, платёжных данных, паролей, файлов cookie авторизации, токенов аккаунтов, сообщений, названий треков или обычного текста страниц. Пользовательские названия пресетов и полные адреса источников медиа не включаются в отчёты. Типичные шаблоны URL и данных авторизации в строках журнала скрываются, однако отчёт всё равно содержит origin сайтов и технические сведения. Перед передачей отчёта просмотрите его.</p>
+
+    <h2>Цели использования и передача данных</h2>
+    <p>Эти сведения используются только для применения настроек звука, сохранения предпочтений и состояния вкладок, а также поиска причин несовместимости. В расширении нет отправки данных на сервер разработчика, внешней аналитики или рекламных сервисов. Диагностика не передаётся разработчику или третьим лицам автоматически.</p>
+    <p>Вы можете самостоятельно скопировать диагностический отчёт в буфер обмена или скачать его как локальный JSON-файл. Последующая отправка отчёта кому-либо, включая службу поддержки или ИИ-сервис, является вашим отдельным действием; к получателю применяются его правила. Расширение не продаёт данные пользователей, не использует их для рекламы или профилирования, оценки платёжеспособности или кредитования.</p>
+    <p>Использование информации, полученной через API Google, соответствует Chrome Web Store User Data Policy, включая требования Limited Use.</p>
+
+    <h2>Срок хранения и управление данными</h2>
+    <p>Настройки и пользовательские пресеты хранятся в браузере до изменения, удаления или очистки локальных данных расширения. Журнал содержит не более 250 событий и сохраняется до очистки, вытеснения новыми событиями или удаления локальных данных расширения. Отключение журнала останавливает добавление записей, но не удаляет существующие. Сессионные данные удаляются при закрытии вкладок или очистке сессионного хранилища браузером.</p>
+    <p>Аудиопотоки и ресурсы обработки освобождаются при остановке обработки или завершении захвата; аудиозапись не сохраняется. Скачанные отчёты и данные в буфере обмена находятся вне хранилища расширения и удаляются отдельно. Удаление расширения удаляет его хранилище, которым управляет браузер, но не скачанные файлы и не отчёты, которые вы уже кому-либо отправили.</p>
+
+    <h2>Разрешения</h2>
+    <p><strong>storage</strong> сохраняет настройки, пресеты, состояние сессий и технические журналы. <strong>scripting</strong> подключает код интеграции со звуком из пакета расширения и собирает техническую диагностику по запросу. <strong>activeTab</strong> поддерживает операции с вкладкой, на которой вы вызвали расширение. <strong>tabCapture</strong> предоставляет живой звук выбранной вкладки. <strong>offscreen</strong> обеспечивает работу звукового движка после закрытия всплывающего окна. Доступ к HTTP- и HTTPS-сайтам используется для раннего обнаружения плееров и работы со встроенными плеерами.</p>
+    <p>Весь исполняемый код входит в пакет расширения. Удалённый исполняемый код не загружается. Ограничение доступа к сайтам и отзыв разрешений могут ограничить работу функций.</p>
+
+    <h2>Изменения</h2>
+    <p>При изменении способов обработки данных эта политика будет обновлена. Дата и применимая версия расширения указаны выше.</p>
+  </section>
+</body>
+</html>
